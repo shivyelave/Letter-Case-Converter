@@ -1,0 +1,20 @@
+.nav-logo{
+    height: 30px;
+    width: 30px;
+    border-radius: 30%;
+}
+.heading{
+    text-align: center;
+}
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: border-bottom 0.3s ease; /* Add transition effect to the border-bottom property */
+  }
+  
+  /* Hover effect */
+  nav ul li a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid blue; /* Add a bottom border on hover */
+  }
+  
