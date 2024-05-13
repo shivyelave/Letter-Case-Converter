@@ -33,7 +33,7 @@ export default function CaseChanger() {
   return (
     <>
         <h1 className='heading my-4'>Case Changer</h1>
-        <div className="container-md my-5">
+        <div className="container my-5">
                 <textarea className="form-control" placeholder="Enter Your Text Here" value={text} onChange={onchange} id="floatingTextarea2"></textarea>
 
             <div className='d-flex justify-content-evenly my-2'>
