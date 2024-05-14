@@ -56,6 +56,7 @@ export default function CaseChanger(props) {
 
         <h1 className='heading my-4'style={{color: props.mode==="light"?'black':'white'}}>Case Changer</h1>
         <div className="container my-5 " >
+
                 <textarea className="form-control" placeholder="Enter Your Text Here" value={text} onChange={onchange} id="floatingTextarea2"></textarea>
 
             <div className='d-flex  my-2'>
