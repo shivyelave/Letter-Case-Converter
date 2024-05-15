@@ -58,18 +58,34 @@ export default function CaseChanger(props) {
         <div className="container my-5 " >
                 <textarea className="form-control" placeholder="Enter Your Text Here" value={text} onChange={onchange} id="floatingTextarea2"></textarea>
 
-            <div className='d-flex  my-2'>
-                <button type="button" className="btn btn-primary m-1" onClick={uppercase} >UPPER CASE</button>
-                <button type="button" className="btn btn-primary m-1"  onClick={lowercase}>lower case</button>
-                <button type="button" className="btn btn-primary m-1"  onClick={camelcase}>Camel Case</button>
-                <button type="button" className="btn btn-primary m-1"  onClick={sentencescase}>Sentence case</button>
-                <button type="button" className="btn btn-primary m-1"  onClick={copyText}>Copy Text</button>
-                <button type="button" className="btn btn-danger m-1"  onClick={clear}>Clear</button>
-            </div>
+                <div className="container my-2">
+                    <div className="row">
+                        <div className="col-6 col-md">
+                            <button type="button" className="btn btn-primary btn-block btn-sm my-1" onClick={uppercase}>UPPER CASE</button>
+                        </div>
+                        <div className="col-6 col-md">
+                            <button type="button" className="btn btn-primary btn-block btn-sm my-1" onClick={lowercase}>lower case</button>
+                        </div>
+                        <div className="col-6 col-md">
+                            <button type="button" className="btn btn-primary btn-block btn-sm my-1" onClick={camelcase}>Camel Case</button>
+                        </div>
+
+                        <div className="col-6 col-md">
+                            <button type="button" className="btn btn-primary btn-block btn-sm my-1" onClick={sentencescase}>Sentence case</button>
+                        </div>
+                        <div className="col-6 col-md">
+                            <button type="button" className="btn btn-primary btn-block btn-sm my-1" onClick={copyText}>Copy Text</button>
+                        </div>
+                        <div className="col-6 col-md">
+                            <button type="button" className="btn btn-danger btn-block btn-sm my-1" onClick={clear}>Clear</button>
+                        </div>
+                    </div>
+                </div>
+
             <h2 className="my-3" style={{color: props.mode==="light"?'black':'white'}}><b>Summary: </b></h2>
             <div className="d-flex justify-content-center gap-3">
                 
-                <h3 style={{color: props.mode==="light"?'black':'white'}}><b>Word Count: </b>{text.split(" ").length}</h3>
+                <h3 style={{color: props.mode==="light"?'black':'white'}}><b>Word Count: </b>{text.split(/\s+/).filter(word => word !== '').length}</h3>
                 <h3 style={{color: props.mode==="light"?'black':'white'}}><b>Letter Count: </b> {text.length}</h3>
             </div>
         </div>
