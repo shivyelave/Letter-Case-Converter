@@ -5,7 +5,7 @@ export default function About(props) {
 
   return (
     <>
-        <form className='container'> 
+        <form className='container margin-bottom'> 
             <h1 className='heading my-4' style={{color: props.mode==="light"?'black':'white'}}>About Us</h1>
 
             <p style={{color: props.mode==="light"?'black':'white'}}>
