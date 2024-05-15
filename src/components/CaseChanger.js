@@ -7,7 +7,8 @@ export default function CaseChanger(props) {
     const [text, setText] = useState("")
     const uppercase = ()=>{
         setText(text.toUpperCase())
-        props.displayMessage("Letters are Converted to UPPERCASE")
+        if(text !==''){
+        props.displayMessage("Letters are Converted to UPPERCASE")}
     }
     const onchange = (event)=>{
         setText(event.target.value)
@@ -15,24 +16,28 @@ export default function CaseChanger(props) {
     }
     const lowercase = ()=>{
         setText(text.toLowerCase())
-        props.displayMessage("Letters are Converted to lowercase")
+        if(text !==''){
+        props.displayMessage("Letters are Converted to lowercase")}
 
     }
     const camelcase = ()=>{
         setText(text.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
             return index === 0 ? word.toLowerCase() : word.toUpperCase();
         }).replace(/\s+/g, ''))
-        props.displayMessage("Letters are Converted to camelCase")
+        if(text !==''){
+        props.displayMessage("Letters are Converted to camelCase")}
 
     }
     const sentencescase = ()=>{
         setText(text.charAt(0).toUpperCase() + text.slice(1).toLowerCase())
-        props.displayMessage("Letters are Converted to Sentence case")
+        if(text !==''){
+        props.displayMessage("Letters are Converted to Sentence case")}
 
     }
     const clear = ()=>{
         setText("")
-        props.displayMessage("Text Cleared")
+        if(text !==''){
+        props.displayMessage("Text Cleared")}
 
     }
 
@@ -45,12 +50,6 @@ export default function CaseChanger(props) {
 
           
 
-
-
-
-
-
-    console.log(text)
   return (
     <>
 

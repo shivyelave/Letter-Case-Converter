@@ -17,4 +17,9 @@ nav ul li a {
     text-decoration: none;
     border-bottom: 2px solid blue; /* Add a bottom border on hover */
   }
-  
+  .footer {
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
